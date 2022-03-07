@@ -1,4 +1,13 @@
 {
-  "users": [],
+  "users": [
+    {
+      "email": "a@b.it",
+      "password": "$2a$10$w4aJvucaZ4DplLfX61I46.5QEP50nve24a4CFjiiCkdVXHKhe0Ddm",
+      "name": "a",
+      "surname": "b",
+      "type": "amministrativo",
+      "id": 1
+    }
+  ],
   "costumers": []
 }

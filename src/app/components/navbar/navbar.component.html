@@ -31,6 +31,30 @@
               >Registrati</a
             >
           </li>
+          <li class="nav-item" *ngIf="isLoggedIn">
+            <a
+              class="nav-link"
+              [routerLink]="['/portfolio']"
+              routerLinkActive="active"
+              >Portfolio</a
+            >
+          </li>
+          <li class="nav-item" *ngIf="isLoggedIn">
+            <a
+              class="nav-link"
+              [routerLink]="['/nuovo-cliente']"
+              routerLinkActive="active"
+              >Nuovo CLiente</a
+            >
+          </li>
+          <li class="nav-item" *ngIf="isLoggedIn">
+            <a
+              class="nav-link"
+              [routerLink]="['/modifica-cliente']"
+              routerLinkActive="active"
+              >Modifica Cliente</a
+            >
+          </li>
         </ul>
         <div *ngIf="isLoggedIn">
           <p class="d-inline username-welc-back">Bentornato <span class="fst-italic fw-bolder">{{welcomeUser}}</span></p>

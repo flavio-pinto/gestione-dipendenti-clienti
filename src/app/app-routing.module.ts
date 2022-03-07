@@ -9,15 +9,10 @@ const routes: Routes = [
   {
     canActivate:[AuthGuard],
     path: 'portfolio',
-    component: PortfolioPage,
-    /* children:[
-      {
-        path: ':id',
-        component: CostumerEditPage
-      }
-    ] */
+    component: PortfolioPage
   },
   {
+    canActivate:[AuthGuard],
     path: 'edit/:id',
     component: CostumerEditPage
   },
@@ -25,7 +20,12 @@ const routes: Routes = [
     canActivate:[AuthGuard],
     path: 'costumer-new',
     component: CostumerNewPage
-  }
+  },
+  {
+    path: '',
+    redirectTo: 'portfolio',
+    pathMatch: 'full'
+  },
 ];
 
 @NgModule({

@@ -15,4 +15,14 @@ export class PortfolioPage implements OnInit {
     this.costumers = await this.costSrv.fetchCostumers();
     console.log(this.costumers);
   }
+
+  async onRemCostumer(id: number, i:number){
+    try {
+      await (await this.costSrv.removeCostumer(id)).toPromise();
+      this.costumers.splice(i, 1)
+    }
+    catch(error) {
+      console.log(error)
+    }
+  }
 }

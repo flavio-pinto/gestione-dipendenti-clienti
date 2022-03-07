@@ -19,39 +19,6 @@
   ],
   "costumers": [
     {
-      "name": "gewgw",
-      "surname": "Baudo",
-      "city": "Napoli",
-      "address": "via Napoli 10",
-      "company": "Pippo Spa",
-      "phone": 34532432,
-      "email": "asdlol@ciao.it",
-      "employeId": 1,
-      "id": 1
-    },
-    {
-      "name": "Flavio",
-      "surname": "Pinto",
-      "city": "Bari",
-      "address": "viaer23rwefewf",
-      "company": "Pippo Spa",
-      "phone": 43532534626,
-      "email": "ewewb@asd.it",
-      "employeId": 1,
-      "id": 2
-    },
-    {
-      "name": "Gennaro",
-      "surname": "Scognamiglio",
-      "city": "Napoli",
-      "address": "via Napoli 10",
-      "company": "Pippo Spa",
-      "phone": 434352,
-      "email": "ejkgnwvw@ghiewhf.it",
-      "employeId": 1,
-      "id": 3
-    },
-    {
       "name": "Cliente",
       "surname": "Di Lavoratore Due",
       "city": "Urbino",
@@ -61,6 +28,17 @@
       "email": "hgehbve@few.it",
       "employeId": 2,
       "id": 4
+    },
+    {
+      "name": "Pippo",
+      "surname": "Scognamiglio",
+      "city": "Napoli",
+      "address": "via Napoli 10",
+      "company": "Pippo Spa",
+      "phone": 5252352,
+      "email": "asdlol@ciao.it",
+      "employeId": 1,
+      "id": 5
     }
   ]
 }

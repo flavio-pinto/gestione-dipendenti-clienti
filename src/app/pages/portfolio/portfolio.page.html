@@ -13,7 +13,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let costumer of costumers">
+      <tr *ngFor="let costumer of costumers; let i = index">
         <td>{{costumer.id}}</td>
         <td>{{costumer.name}}</td>
         <td>{{costumer.surname}}</td>
@@ -23,7 +23,7 @@
         <td>{{costumer.phone}}</td>
         <td>{{costumer.email}}</td>
         <td><button [routerLink]="['/modifica-cliente']" class="btn btn-success">Modifica</button></td>
-        <td><button class="btn btn-danger">Elimina</button></td>
+        <td><button class="btn btn-danger" (click)="onRemCostumer(costumer.id, i)">Elimina</button></td>
       </tr>
     </tbody>
   </table>

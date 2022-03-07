@@ -7,17 +7,17 @@ import { CostumerNewPage } from './pages/costumer-new/costumer-new.page';
 
 const routes: Routes = [
   {
-    // canActivate:[AuthGuard],
+    canActivate:[AuthGuard],
     path: 'portfolio',
     component: PortfolioPage
   },
   {
-    // canActivate:[AuthGuard],
+    canActivate:[AuthGuard],
     path: 'costumer-new',
     component: CostumerNewPage
   },
   {
-    // canActivate:[AuthGuard],
+    canActivate:[AuthGuard],
     path: 'modifica-cliente',
     component: ModificaClientePage
   }

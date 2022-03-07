@@ -18,7 +18,7 @@ export class CostumerNewPage implements OnInit {
   async onsubmit(form: NgForm) {
     this.isLoading = true;
     try {
-      await this.costSrv.newCostumer(form.value).toPromise();
+      await (await this.costSrv.newCostumer(form.value)).toPromise();
       form.reset();
       this.isLoading = false;
       this.errorMessage = undefined

@@ -1,0 +1,41 @@
+<div class="container text-center p-5 mt-5 rounded">
+  <div class="row justify-content-center">
+    <div *ngIf="errorMessage" class="alert alert-danger" role="alert">
+      {{errorMessage}}
+    </div>
+    <form #form="ngForm" (ngSubmit)="onsubmit(form)">
+      <div class="form-group mb-2">
+        <label for="name">Nome</label>
+        <input ngModel name="name" class="form-control" type="text" id="name" />
+      </div>
+      <div class="form-group mb-2">
+        <label for="cognome">Cognome</label>
+        <input ngModel name="surname" class="form-control" type="text" id="cognome" />
+      </div>
+      <div class="form-group mb-2">
+        <label for="city">City</label>
+        <input ngModel name="city" class="form-control" type="text" id="city" />
+      </div>
+      <div class="form-group mb-2">
+        <label for="addr">Address</label>
+        <input ngModel name="address" class="form-control" type="text" id="addr" />
+      </div>
+      <div class="form-group mb-2">
+        <label for="comp">Company</label>
+        <input ngModel name="company" class="form-control" type="text" id="comp" />
+      </div>
+      <div class="form-group mb-2">
+        <label for="phone">Phone</label>
+        <input ngModel name="phone" class="form-control" type="number" id="phone" />
+      </div>
+      <div class="form-group mb-2">
+        <label for="email">Email</label>
+        <input ngModel name="email" class="form-control" type="email" id="email" />
+      </div>
+      <button class="btn btn-primary mt-3" [disabled]="isLoading" type="submit">
+        Crea Nuovo Cliente
+        <span *ngIf="isLoading" class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+      </button>
+    </form>
+  </div>
+</div>

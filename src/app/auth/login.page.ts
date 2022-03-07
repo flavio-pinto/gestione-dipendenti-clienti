@@ -4,12 +4,12 @@ import { AuthService } from "./auth.service";
 
 @Component({
   template: `
-    <div class="row justify-content-center mt-5 w-25 text-center border p-3 mx-auto">
-      <div class="col-6">
+  <div class="container mt-5 text-center p-5">
+    <div class="row justify-content-center">
       <div *ngIf="errorMessage" class="alert alert-danger" role="alert">
           {{errorMessage}}
         </div>
-        <form #form="ngForm" (ngSubmit)="onSubmit(form)" >
+        <form class="mb-3" #form="ngForm" (ngSubmit)="onSubmit(form)" >
           <div class="form-group">
             <label for="email">Email</label>
             <input ngModel name="email" class="form-control" type="email" id="email" />
@@ -27,11 +27,15 @@ import { AuthService } from "./auth.service";
             ></span>
           </button>
         </form>
-        <span>o <a class="text-decoration-underline" (click)="goRegister()">Registrati</a></span>
+        <p>Nuovo utente? <a [routerLink]="['/signup']">Registrati</a></p>
       </div>
     </div>
   `,
-  styles: [],
+  styles: [`
+  .container {
+    border: 1px solid black;
+    width: 30em;
+  }`],
 })
 export class LoginPage implements OnInit {
   isLoading = false
@@ -53,9 +57,5 @@ export class LoginPage implements OnInit {
       this.errorMessage = error
       console.error(error)
     }
-  }
-
-  goRegister() {
-    this.router.navigate(['/signup']);
   }
 }

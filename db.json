@@ -39,6 +39,17 @@
       "email": "asdlol@ciao.it",
       "employeId": 1,
       "id": 5
+    },
+    {
+      "name": "Pippo",
+      "surname": "Baudo",
+      "city": "Napoli",
+      "address": "via Napoli 10",
+      "company": "Pippo Spa",
+      "phone": 3432423,
+      "email": "pippobaudo@rai10.it",
+      "employeId": 1,
+      "id": 6
     }
   ]
 }

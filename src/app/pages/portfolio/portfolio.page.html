@@ -22,8 +22,9 @@
         <td>{{costumer.company}}</td>
         <td>{{costumer.phone}}</td>
         <td>{{costumer.email}}</td>
-        <td><button [routerLink]="['/modifica-cliente']" class="btn btn-success">Modifica</button></td>
+        <td><button class="btn btn-success" [routerLink]="['/edit', costumer.id]">Modifica</button></td>
         <td><button class="btn btn-danger" (click)="onRemCostumer(costumer.id, i)">Elimina</button></td>
       </tr>
     </tbody>
   </table>
+

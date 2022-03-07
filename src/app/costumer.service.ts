@@ -47,4 +47,8 @@ export class CostumerService {
     }
     return this.http.post<Costumer>(`${this.URL}/costumers`, costumerData);
   }
+
+  getCostumer(id: number) {
+    return this.http.get<Costumer>(`${this.URL}/costumers/${id}`);
+  }
 }

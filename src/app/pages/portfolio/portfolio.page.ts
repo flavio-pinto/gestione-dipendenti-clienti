@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { CostumerService } from 'src/app/costumer.service';
 import { Costumer } from 'src/app/models/costumer';
 
@@ -9,7 +10,7 @@ import { Costumer } from 'src/app/models/costumer';
 export class PortfolioPage implements OnInit {
   costumers!: Costumer[];
 
-  constructor(private costSrv: CostumerService) { }
+  constructor(private costSrv: CostumerService, private router: Router) { }
 
   async ngOnInit() {
     this.costumers = await this.costSrv.fetchCostumers();

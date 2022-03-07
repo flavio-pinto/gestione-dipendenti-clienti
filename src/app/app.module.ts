@@ -7,13 +7,15 @@ import { AuthModule } from './auth/auth.module';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { CostumerNewPage } from './pages/costumer-new/costumer-new.page';
 import { PortfolioPage } from './pages/portfolio/portfolio.page';
+import { CostumerEditPage } from './pages/costumer-edit/costumer-edit.page';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     CostumerNewPage,
-    PortfolioPage
+    PortfolioPage,
+    CostumerEditPage
   ],
   imports: [
     BrowserModule,

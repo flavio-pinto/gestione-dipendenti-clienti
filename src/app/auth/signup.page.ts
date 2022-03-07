@@ -36,11 +36,12 @@ import { AuthService } from "./auth.service";
             <label for="commerciale" class="me-1">Commerciale</label>
             <input ngModel name="type" class="form-check-input me-3" type="radio" value="commerciale" />
           </div>
-          <button class="btn btn-primary mt-3" [disabled]="isLoading" type="submit">
+          <button class="btn btn-primary mt-3 mb-3" [disabled]="isLoading" type="submit">
             Registrati
             <span *ngIf="isLoading" class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
           </button>
         </form>
+        <p>Sei già registrato? <a [routerLink]="['/login']">Accedi</a></p>
       </div>
     </div>
   `,

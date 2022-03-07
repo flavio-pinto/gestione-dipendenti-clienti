@@ -1,42 +1,48 @@
 <div class="container text-center p-5 mt-5 rounded">
-    <div class="row justify-content-center">
-      <div *ngIf="errorMessage" class="alert alert-danger" role="alert">
-        {{errorMessage}}
+    <ng-container *ngIf="costumer.employeId == employeId; else unauthorizedTemplate">
+      <div class="row justify-content-center">
+        <div *ngIf="errorMessage" class="alert alert-danger" role="alert">
+          {{errorMessage}}
+        </div>
+        <form #form="ngForm" (ngSubmit)="onsubmit(form)">
+          <div class="form-group mb-2">
+            <label for="name">Nome</label>
+            <input ngModel name="name" class="form-control" type="text" id="name" [(ngModel)]="costumer.name"/>
+          </div>
+          <div class="form-group mb-2">
+            <label for="surname">Cognome</label>
+            <input ngModel name="surname" class="form-control" type="text" id="surname" [(ngModel)]="costumer.surname"/>
+          </div>
+          <div class="form-group mb-2">
+            <label for="city">City</label>
+            <input ngModel name="city" class="form-control" type="text" id="city" [(ngModel)]="costumer.city"/>
+          </div>
+          <div class="form-group mb-2">
+            <label for="addr">Address</label>
+            <input ngModel name="address" class="form-control" type="text" id="addr" [(ngModel)]="costumer.address"/>
+          </div>
+          <div class="form-group mb-2">
+            <label for="comp">Company</label>
+            <input ngModel name="company" class="form-control" type="text" id="comp" [(ngModel)]="costumer.company"/>
+          </div>
+          <div class="form-group mb-2">
+            <label for="phone">Phone</label>
+            <input ngModel name="phone" class="form-control" type="number" id="phone" [(ngModel)]="costumer.phone"/>
+          </div>
+          <div class="form-group mb-2">
+            <label for="email">Email</label>
+            <input ngModel name="email" class="form-control" type="email" id="email" [(ngModel)]="costumer.email"/>
+          </div>
+          <button class="btn btn-primary mt-3" [disabled]="isLoading" type="submit">
+            Inserisci Nuovo Cliente
+            <span *ngIf="isLoading" class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+          </button>
+        </form>
       </div>
-      <form #form="ngForm" (ngSubmit)="onsubmit(form)">
-        <div class="form-group mb-2">
-          <label for="name">Nome</label>
-          <input ngModel name="name" class="form-control" type="text" id="name" [(ngModel)]="costumer.name"/>
-        </div>
-        <div class="form-group mb-2">
-          <label for="surname">Cognome</label>
-          <input ngModel name="surname" class="form-control" type="text" id="surname" [(ngModel)]="costumer.surname"/>
-        </div>
-        <div class="form-group mb-2">
-          <label for="city">City</label>
-          <input ngModel name="city" class="form-control" type="text" id="city" [(ngModel)]="costumer.city"/>
-        </div>
-        <div class="form-group mb-2">
-          <label for="addr">Address</label>
-          <input ngModel name="address" class="form-control" type="text" id="addr" [(ngModel)]="costumer.address"/>
-        </div>
-        <div class="form-group mb-2">
-          <label for="comp">Company</label>
-          <input ngModel name="company" class="form-control" type="text" id="comp" [(ngModel)]="costumer.company"/>
-        </div>
-        <div class="form-group mb-2">
-          <label for="phone">Phone</label>
-          <input ngModel name="phone" class="form-control" type="number" id="phone" [(ngModel)]="costumer.phone"/>
-        </div>
-        <div class="form-group mb-2">
-          <label for="email">Email</label>
-          <input ngModel name="email" class="form-control" type="email" id="email" [(ngModel)]="costumer.email"/>
-        </div>
-        <button class="btn btn-primary mt-3" [disabled]="isLoading" type="submit">
-          Inserisci Nuovo Cliente
-          <span *ngIf="isLoading" class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
-        </button>
-      </form>
-    </div>
+    </ng-container>
   </div>
+
+  <ng-template #unauthorizedTemplate>
+    <h1 class="text-center mt-5">ATTENZIONE: NON SEI AUTORIZZATO A VISUALIZZARE QUESTO POST!</h1>
+  </ng-template>
 

@@ -11,10 +11,13 @@ import { Router } from '@angular/router';
 })
 export class CostumerEditPage implements OnInit {
   costumer!: Costumer;
+  employeId!: number;
 
   isLoading = false;
   errorMessage = undefined;
-  constructor(private costSrv: CostumerService, private router: Router, private actRoute: ActivatedRoute) {}
+  constructor(private costSrv: CostumerService, private router: Router, private actRoute: ActivatedRoute) {
+
+  }
 
   ngOnInit(): void {
     this.actRoute.params.subscribe(params => {
@@ -25,6 +28,13 @@ export class CostumerEditPage implements OnInit {
         console.log(this.costumer);
       });
     })
+
+    const userJson = localStorage.getItem('user');
+    if(!userJson) {
+      return
+    }
+    const user = JSON.parse(userJson);
+    this.employeId = user.user.id;
   }
 
 

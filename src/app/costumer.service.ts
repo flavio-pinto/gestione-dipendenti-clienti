@@ -3,7 +3,7 @@ import { HttpClient } from "@angular/common/http";
 import { Router } from "@angular/router";
 import { Costumer } from './models/costumer';
 import { AuthData, AuthService } from './auth/auth.service';
-import { take } from 'rxjs';
+import { map, take } from 'rxjs';
 
 export interface NewUserData {
   name: string;
@@ -50,5 +50,19 @@ export class CostumerService {
 
   getCostumer(id: number) {
     return this.http.get<Costumer>(`${this.URL}/costumers/${id}`);
+  }
+
+  async editCostumer(data: Partial<Costumer>, id: number) {
+    const employe = (await this.authSrv.user$.pipe(take(1)).toPromise()) as AuthData;
+    return this.http.put(`${this.URL}/costumers/${id}`, {
+      name: data.name,
+      surname: data.surname,
+      city: data.city,
+      address: data.address,
+      company: data.company,
+      phone: data.phone,
+      email: data.email,
+      employeId: employe.user.id
+    });
   }
 }

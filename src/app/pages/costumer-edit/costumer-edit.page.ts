@@ -31,7 +31,7 @@ export class CostumerEditPage implements OnInit {
   async onsubmit(form: NgForm) {
     this.isLoading = true;
     try {
-      await (await this.costSrv.newCostumer(form.value)).toPromise();
+      await (await this.costSrv.editCostumer(form.value, this.costumer.id)).toPromise();
       form.reset();
       this.isLoading = false;
       this.errorMessage = undefined

@@ -1,1 +1,28 @@
-<p>portfolio works!</p>
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">id</th>
+        <th scope="col">Nome</th>
+        <th scope="col">Cognome</th>
+        <th scope="col">Città</th>
+        <th scope="col">Indirizzo</th>
+        <th scope="col">Company</th>
+        <th scope="col">Phone</th>
+        <th scope="col">Email</th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let costumer of costumers">
+        <td>{{costumer.id}}</td>
+        <td>{{costumer.name}}</td>
+        <td>{{costumer.surname}}</td>
+        <td>{{costumer.city}}</td>
+        <td>{{costumer.address}}</td>
+        <td>{{costumer.company}}</td>
+        <td>{{costumer.phone}}</td>
+        <td>{{costumer.email}}</td>
+        <td><button class="btn btn-primary">Modifica</button></td>
+      </tr>
+    </tbody>
+  </table>

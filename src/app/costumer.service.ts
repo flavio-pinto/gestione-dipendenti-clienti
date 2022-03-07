@@ -4,7 +4,6 @@ import { Router } from "@angular/router";
 import { Costumer } from './models/costumer';
 import { AuthData, AuthService } from './auth/auth.service';
 import { take } from 'rxjs';
-import { NgForm } from '@angular/forms';
 
 export interface NewUserData {
   name: string;
@@ -16,6 +15,11 @@ export interface NewUserData {
   email: string;
 }
 
+/* export interface MyCostumersData {
+  costumer: Costumer;
+  employeId?: number;
+} */
+
 @Injectable({
   providedIn: 'root'
 })
@@ -24,10 +28,19 @@ export class CostumerService {
 
   constructor(private http: HttpClient, private router:Router, private authSrv: AuthService) { }
 
+  async fetchCostumers(): Promise<Costumer[]> {
+    const employe = (await this.authSrv.user$.pipe(take(1)).toPromise()) as AuthData;
+    const costumers = await this.http.get<Costumer[]>(`${this.URL}/costumers?userId=${employe.user.id}`).toPromise();
+
+    /* return costumers!.map((el) => ({
+      costumer: el,
+      employeId: employe.user.id
+    })); */
+    return costumers!.filter(el => el.employeId == employe.user.id);
+  }
+
   async newCostumer(data: NewUserData){
     const employe = (await this.authSrv.user$.pipe(take(1)).toPromise()) as AuthData;
-    console.log(employe);
-
     const costumerData = {
       name: data.name,
       surname: data.surname,
@@ -38,7 +51,6 @@ export class CostumerService {
       email: data.email,
       employeId: employe?.user.id
     }
-    console.log(costumerData);
     return this.http.post<Costumer>(`${this.URL}/costumers`, costumerData);
   }
 }

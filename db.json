@@ -7,6 +7,14 @@
       "surname": "b",
       "type": "amministrativo",
       "id": 1
+    },
+    {
+      "email": "lavoratoredue@due.it",
+      "password": "$2a$10$R86wAqtwkTwVmI5FG3pIluyV0A4X8AtIrMwXQt45rCld1UeyQF6um",
+      "name": "Lavoratore",
+      "surname": "Due",
+      "type": "contabile",
+      "id": 2
     }
   ],
   "costumers": [
@@ -31,6 +39,28 @@
       "email": "ewewb@asd.it",
       "employeId": 1,
       "id": 2
+    },
+    {
+      "name": "Gennaro",
+      "surname": "Scognamiglio",
+      "city": "Napoli",
+      "address": "via Napoli 10",
+      "company": "Pippo Spa",
+      "phone": 434352,
+      "email": "ejkgnwvw@ghiewhf.it",
+      "employeId": 1,
+      "id": 3
+    },
+    {
+      "name": "Cliente",
+      "surname": "Di Lavoratore Due",
+      "city": "Urbino",
+      "address": "via fdjksfiwe",
+      "company": "Dbbdf spa",
+      "phone": 847328947,
+      "email": "hgehbve@few.it",
+      "employeId": 2,
+      "id": 4
     }
   ]
 }

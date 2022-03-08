@@ -15,6 +15,22 @@
       "surname": "Due",
       "type": "contabile",
       "id": 2
+    },
+    {
+      "email": "b@c.it",
+      "password": "$2a$10$8jbvzQXNs44S0TgWoyHWA.XwNMOnNryNSkefuRPvDeatKMYu.pndi",
+      "name": "sssss",
+      "surname": "sssss",
+      "type": "commerciale",
+      "id": 3
+    },
+    {
+      "email": "f@p.it",
+      "password": "$2a$10$3I17/vkt6ObmdSrUtsYpC.EvFch49D1TlIf/jLXSIBI74jmOcefxG",
+      "name": "Flavio",
+      "surname": "Pinto",
+      "type": "contabile",
+      "id": 4
     }
   ],
   "costumers": [
@@ -31,17 +47,6 @@
     },
     {
       "name": "Pippo",
-      "surname": "Scognamiglio",
-      "city": "Napoli",
-      "address": "via Napoli 10",
-      "company": "Pippo Spa",
-      "phone": 5252352,
-      "email": "asdlol@ciao.it",
-      "employeId": 1,
-      "id": 5
-    },
-    {
-      "name": "Pippo",
       "surname": "Baudo",
       "city": "Napoli",
       "address": "via Napoli 10",
@@ -52,15 +57,26 @@
       "id": 6
     },
     {
-      "name": "22222",
-      "surname": "22222",
-      "city": "22222",
-      "address": "22222",
-      "company": "22222",
-      "phone": 22222,
-      "email": "22222",
+      "name": "ewevewv",
+      "surname": "wveewve",
+      "city": "evevwve",
+      "address": "veewv",
+      "company": "vevewv",
+      "phone": 2343242314,
+      "email": "adwfw@rgere.t",
       "employeId": 1,
       "id": 7
+    },
+    {
+      "name": "wefewvcew",
+      "surname": "wevewv",
+      "city": "ewvewv",
+      "address": "ewvewv",
+      "company": "vwwv",
+      "phone": 214214,
+      "email": "dwd@g.it",
+      "employeId": 3,
+      "id": 8
     }
   ]
 }

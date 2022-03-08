@@ -34,7 +34,7 @@
             <input ngModel name="email" class="form-control" type="email" id="email" [(ngModel)]="costumer.email"/>
           </div>
           <button class="btn btn-primary mt-3" [disabled]="isLoading" type="submit">
-            Inserisci Nuovo Cliente
+            Modifica Cliente
             <span *ngIf="isLoading" class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
           </button>
         </form>
@@ -43,6 +43,6 @@
   </div>
 
   <ng-template #unauthorizedTemplate>
-    <h1 class="text-center mt-5">ATTENZIONE: NON SEI AUTORIZZATO A VISUALIZZARE QUESTO POST!</h1>
+    <h1 class="text-center mt-5">ATTENZIONE: NON SEI AUTORIZZATO A VISUALIZZARE QUESTO CLIENTE!</h1>
   </ng-template>
 

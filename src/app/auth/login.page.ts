@@ -44,7 +44,6 @@ export class LoginPage implements OnInit {
 
   ngOnInit(): void {
 
-
   }
 
   async onSubmit(form:any){

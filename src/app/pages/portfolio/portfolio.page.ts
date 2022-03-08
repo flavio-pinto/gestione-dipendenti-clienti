@@ -14,7 +14,6 @@ export class PortfolioPage implements OnInit {
 
   async ngOnInit() {
     this.costumers = await this.costSrv.fetchCostumers();
-    console.log(this.costumers);
   }
 
   async onRemCostumer(id: number, i:number){

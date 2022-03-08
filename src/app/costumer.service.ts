@@ -3,7 +3,8 @@ import { HttpClient } from "@angular/common/http";
 import { Router } from "@angular/router";
 import { Costumer } from './models/costumer';
 import { AuthData, AuthService } from './auth/auth.service';
-import { map, take } from 'rxjs';
+import { filter, take } from 'rxjs';
+import { Fattura } from './models/fattura';
 
 export interface NewUserData {
   name: string;
@@ -31,6 +32,7 @@ export class CostumerService {
 
   async removeCostumer(costumerId: number){
     return this.http.delete(`${this.URL}/costumers/${costumerId}`);
+    // this.http.delete(`${this.URL}/fatture/${costumerId}`);
   }
 
   async newCostumer(data: NewUserData){
@@ -64,5 +66,21 @@ export class CostumerService {
       email: data.email,
       employeId: employe.user.id
     });
+  }
+
+  async getFatture(idCostumer: number) {
+    const fatture = await this.http.get<Fattura[]>(`${this.URL}/fatture`).toPromise();
+    return fatture!.filter(el => el.costumerId == idCostumer);
+  }
+
+  // return costumers!.filter(el => el.employeId == employe.user.id);
+
+  async newFattura(data: Fattura, idCostumer: number){
+    const fatturaData = {
+      importo: data.importo,
+      description: data.description,
+      costumerId: idCostumer
+    }
+    return this.http.post<Fattura>(`${this.URL}/fatture`, fatturaData);
   }
 }

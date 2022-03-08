@@ -25,7 +25,6 @@ export class CostumerEditPage implements OnInit {
 
       this.costSrv.getCostumer(id).subscribe(res => {
         this.costumer = res;
-        console.log(this.costumer);
       });
     })
 

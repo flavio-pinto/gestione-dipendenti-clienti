@@ -78,5 +78,25 @@
       "employeId": 3,
       "id": 8
     }
+  ],
+  "fatture":[
+    {
+      "id": 1,
+      "importo": 50,
+      "description": "Bella fattura 1",
+      "costumerId": 6
+    },
+    {
+      "id": 2,
+      "importo": 150,
+      "description": "Bella fattura 2",
+      "costumerId": 6
+    },
+    {
+      "id": 3,
+      "importo": 250,
+      "description": "Bella fattura 3",
+      "costumerId": 6
+    }
   ]
 }

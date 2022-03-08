@@ -17,9 +17,18 @@ export class PortfolioPage implements OnInit {
   }
 
   async onRemCostumer(id: number, i:number){
+    /* try {
+      await (await this.costSrv.removeCostumer(id)).toPromise();
+      await (await this.costSrv.removeFattureByCostumer(id)).toPromise();
+      this.costumers.splice(i, 1);
+    }
+    catch(error) {
+      console.log(error)
+    } */
     try {
       await (await this.costSrv.removeCostumer(id)).toPromise();
-      this.costumers.splice(i, 1)
+      this.costumers.splice(i, 1);
+      await (await this.costSrv.removeFattureByCostumer(id)).toPromise();
     }
     catch(error) {
       console.log(error)

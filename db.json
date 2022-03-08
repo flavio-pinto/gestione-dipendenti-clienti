@@ -46,28 +46,6 @@
       "id": 4
     },
     {
-      "name": "Pippo",
-      "surname": "Baudo",
-      "city": "Napoli",
-      "address": "via Napoli 10",
-      "company": "Pippo Spa",
-      "phone": 3432423,
-      "email": "pippobaudo@rai10.it",
-      "employeId": 1,
-      "id": 6
-    },
-    {
-      "name": "ewevewv",
-      "surname": "wveewve",
-      "city": "evevwve",
-      "address": "veewv",
-      "company": "vevewv",
-      "phone": 2343242314,
-      "email": "adwfw@rgere.t",
-      "employeId": 1,
-      "id": 7
-    },
-    {
       "name": "wefewvcew",
       "surname": "wevewv",
       "city": "ewvewv",
@@ -77,56 +55,48 @@
       "email": "dwd@g.it",
       "employeId": 3,
       "id": 8
+    },
+    {
+      "name": "Pippo",
+      "surname": "Baudo",
+      "city": "Napoli",
+      "address": "via Napoli 10",
+      "company": "Pippo Spa",
+      "phone": 324124,
+      "email": "ewewb@asd.it",
+      "employeId": 1,
+      "id": 9
+    },
+    {
+      "name": "Gennaro",
+      "surname": "Scognamiglio",
+      "city": "Napoli",
+      "address": "via Napoli 10",
+      "company": "wevewvwe",
+      "phone": 6435324,
+      "email": "pippobaudo@rai10.it",
+      "employeId": 1,
+      "id": 10
     }
   ],
   "fatture": [
     {
-      "id": 1,
-      "importo": 50,
-      "description": "Bella fattura 1",
-      "costumerId": 6
+      "importo": 234124,
+      "description": "dfdvrvsd",
+      "costumerId": 9,
+      "id": 1
     },
     {
-      "id": 2,
-      "importo": 150,
-      "description": "Bella fattura 2",
-      "costumerId": 6
+      "importo": 534523,
+      "description": "dsffewcw",
+      "costumerId": 9,
+      "id": 2
     },
     {
-      "id": 3,
-      "importo": 250,
-      "description": "Bella fattura 3",
-      "costumerId": 6
-    },
-    {
-      "importo": 4535,
-      "description": "ciao",
-      "costumerId": 6,
-      "id": 5
-    },
-    {
-      "importo": 10,
-      "description": "aasacscsw",
-      "costumerId": 6,
-      "id": 6
-    },
-    {
-      "importo": 2034,
-      "description": "pdwqc",
-      "costumerId": 6,
-      "id": 7
-    },
-    {
-      "importo": 34,
-      "description": "asadf",
-      "costumerId": 6,
-      "id": 8
-    },
-    {
-      "importo": 15,
-      "description": "wevew",
-      "costumerId": 6,
-      "id": 9
+      "importo": 765645,
+      "description": "vdfvev",
+      "costumerId": 9,
+      "id": 3
     }
   ]
 }

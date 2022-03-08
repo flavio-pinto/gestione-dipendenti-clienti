@@ -34,6 +34,10 @@ export class CostumerService {
     return this.http.delete(`${this.URL}/costumers/${costumerId}`);
   }
 
+  async removeFattureByCostumer(costumerId: number) {
+    return this.http.delete(`${this.URL}/fatture?costumerId?=${costumerId}`);
+  }
+
   async newCostumer(data: NewUserData){
     const employe = (await this.authSrv.user$.pipe(take(1)).toPromise()) as AuthData;
     const costumerData = {

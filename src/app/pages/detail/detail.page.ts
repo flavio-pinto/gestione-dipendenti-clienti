@@ -17,7 +17,7 @@ export class DetailPage implements OnInit {
 
   constructor(private costSrv: CostumerService, private actRoute: ActivatedRoute) { }
 
-  async ngOnInit() {
+  ngOnInit() {
     this.actRoute.params.subscribe(params => {
       const id = +params['id'];
 
@@ -26,23 +26,27 @@ export class DetailPage implements OnInit {
 
         this.costSrv.getFatture(this.costumer.id).then((res) => {
           this.fatture = res;
-          console.log(this.fatture);
         });
       });
     });
   }
 
-  // async onsubmit(form: NgForm) {
-  //   this.isLoading = true;
-  //   try {
-  //     await (await this.costSrv.newFattura(form.value)).toPromise();
-  //     form.reset();
-  //     this.isLoading = false;
-  //     this.errorMessage = undefined
-  //   } catch (error:any) {
-  //     this.isLoading = false;
-  //     this.errorMessage = error
-  //     console.error(error);
-  //   }
-  // }
+  async onsubmit(form: NgForm) {
+    this.isLoading = true;
+    try {
+      await (await this.costSrv.newFattura(form.value, this.costumer.id)).toPromise();
+      form.reset();
+      this.isLoading = false;
+      this.errorMessage = undefined;
+      alert('Fattura inserita!');
+    } catch (error:any) {
+      this.isLoading = false;
+      this.errorMessage = error
+      console.error(error);
+    } finally {
+      this.costSrv.getFatture(this.costumer.id).then((res) => {
+        this.fatture = res;
+      });
+    }
+  }
 }

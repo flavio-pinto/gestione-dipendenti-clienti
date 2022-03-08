@@ -43,7 +43,6 @@ export class AuthService {
   login(data: { email: string; password: string }) {
     return this.http.post<AuthData>(`${this.URL}/login`, data).pipe(
       tap((val) => {
-        console.log(val);
       }),
       tap((data) => {
         this.authSubject.next(data);

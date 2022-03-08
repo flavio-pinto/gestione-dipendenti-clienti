@@ -79,7 +79,7 @@
       "id": 8
     }
   ],
-  "fatture":[
+  "fatture": [
     {
       "id": 1,
       "importo": 50,
@@ -97,6 +97,36 @@
       "importo": 250,
       "description": "Bella fattura 3",
       "costumerId": 6
+    },
+    {
+      "importo": 4535,
+      "description": "ciao",
+      "costumerId": 6,
+      "id": 5
+    },
+    {
+      "importo": 10,
+      "description": "aasacscsw",
+      "costumerId": 6,
+      "id": 6
+    },
+    {
+      "importo": 2034,
+      "description": "pdwqc",
+      "costumerId": 6,
+      "id": 7
+    },
+    {
+      "importo": 34,
+      "description": "asadf",
+      "costumerId": 6,
+      "id": 8
+    },
+    {
+      "importo": 15,
+      "description": "wevew",
+      "costumerId": 6,
+      "id": 9
     }
   ]
 }

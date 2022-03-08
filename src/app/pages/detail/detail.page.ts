@@ -23,20 +23,13 @@ export class DetailPage implements OnInit {
 
       this.costSrv.getCostumer(id).subscribe(res => {
         this.costumer = res;
-        //console.log(this.costumer.id);
+
+        this.costSrv.getFatture(this.costumer.id).then((res) => {
+          this.fatture = res;
+          console.log(this.fatture);
+        });
       });
     });
-    setTimeout(() => {
-      this.costSrv.getFatture(this.costumer.id).then((res) => {
-        this.fatture = res;
-        console.log(res);
-      });
-    }, 2000);
-
-
-   /* this.fatture = await this.costSrv.getFatture(this.costumer.id);
-   console.log(this.fatture); */
-
   }
 
   // async onsubmit(form: NgForm) {

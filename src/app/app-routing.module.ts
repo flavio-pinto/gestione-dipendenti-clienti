@@ -4,6 +4,7 @@ import { AuthGuard } from './auth/auth.guard';
 import { PortfolioPage } from './pages/portfolio/portfolio.page';
 import { CostumerNewPage } from './pages/costumer-new/costumer-new.page';
 import { CostumerEditPage } from './pages/costumer-edit/costumer-edit.page';
+import { DetailPage } from './pages/detail/detail.page';
 
 const routes: Routes = [
   {
@@ -15,6 +16,11 @@ const routes: Routes = [
     canActivate:[AuthGuard],
     path: 'edit/:id',
     component: CostumerEditPage
+  },
+  {
+    canActivate:[AuthGuard],
+    path: 'detail/:id',
+    component: DetailPage
   },
   {
     canActivate:[AuthGuard],

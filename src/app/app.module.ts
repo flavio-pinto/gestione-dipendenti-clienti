@@ -8,6 +8,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { CostumerNewPage } from './pages/costumer-new/costumer-new.page';
 import { PortfolioPage } from './pages/portfolio/portfolio.page';
 import { CostumerEditPage } from './pages/costumer-edit/costumer-edit.page';
+import { DetailPage } from './pages/detail/detail.page';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { CostumerEditPage } from './pages/costumer-edit/costumer-edit.page';
     NavbarComponent,
     CostumerNewPage,
     PortfolioPage,
-    CostumerEditPage
+    CostumerEditPage,
+    DetailPage
   ],
   imports: [
     BrowserModule,
